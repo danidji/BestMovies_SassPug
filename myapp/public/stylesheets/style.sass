@@ -1,6 +1,35 @@
+//Mixin
+=getSize($width,$height)
+  width: $width
+  height: $height
+
+=getPadding($rightLeft,$topBottom)
+  padding-left: $rightLeft
+  padding-right: $rightLeft
+  padding-top: $topBottom
+  padding-bottom: $topBottom
+
+=getMargin($rightLeft,$topBottom)
+  margin-left: $rightLeft
+  margin-right: $rightLeft
+  margin-top: $topBottom
+  margin-bottom: $topBottom
+
+*
+  transition: all .4s
+  word-break: break-all
+
 body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  +getMargin(50px,10px)
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif
+  background-color: #FEF4E2
+  color: #1C0E10
 
 a
-  color: #00B7FF
+  color: #1C0E10
+
+  &:hover
+    color: #622680
+
+  &:visited
+    color: #622680
