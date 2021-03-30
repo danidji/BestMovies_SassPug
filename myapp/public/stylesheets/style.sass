@@ -1,3 +1,8 @@
+// Variables
+$primary-color: #1C0E10
+$secondary-color: #FEF4E2
+$thrid-color: #4c262b
+
 //Mixin
 =getSize($width,$height)
   width: $width
@@ -15,62 +20,70 @@
   margin-top: $topBottom
   margin-bottom: $topBottom
 =getBorder()
-  border: 5px #4c262b solid
-  box-shadow: 5px 5px 10px #1C0E10
+  border: 5px $thrid-color solid
+  box-shadow: 5px 5px 10px $primary-color
   border-radius: 10px
 
 *
-  transition: all .4s
+  transition: all .2s
   // word-break: break-all
 
 body
   +getMargin(50px,0px)
   font: 18px nunito,"Lucida Grande", Helvetica, Arial, sans-serif
-  background-color: #FEF4E2
-  color: #1C0E10
+  background-color: $secondary-color
+  color: $primary-color
 
 a
-  color: #1C0E10
+  color: $primary-color
   text-decoration: none
 
   &:hover
-    color: #4c262b
+    color: $thrid-color
 
   // &:visited
   //   color: #622680
 
 nav
-  display: flex
-  justify-content: space-between
-  background-color: #4c262b
-  box-shadow: 5px 5px 10px #1C0E10
+  +getPadding(0,5px)
+  background-color: $thrid-color
+  box-shadow: 5px 5px 10px $primary-color
   border-radius: 0px 0px 10px 10px
 
   .title
-    color: #FEF4E2
+    text-align: center
+    color: $secondary-color
+    font-size: 3rem
+    font-style: italic
+    font-weight: bold
+    margin-top: 15px
   ul
-    display: flex
+    text-align: center
+    padding: 0
   li
-    display: block
-    +getMargin(10px,0)
+    +getMargin(0px,5px)
     font-size: 1.5em
     font-weight: bold
+    list-style-type: none
     a
-      color: #FEF4E2
+      color: $secondary-color
+      +getPadding(0px,5px)
+      display: block
+
       &:hover
-        color: #FEF4E2
+        color: $secondary-color
+        background-color: $primary-color
 
       &:visited
-        color: #FEF4E2
+        color: $secondary-color
 
 section
-  display: flex
-  +getMargin(0,25px)
+  // display: flex
+  // +getMargin(0,25px)
 
   .monArticle
-    +getMargin(25px,20px)
+    +getMargin(0,20px)
     +getPadding(25px,0)
-    max-width: 800px
     +getBorder()
 
   .header
@@ -97,8 +110,16 @@ section
 
   .sideBar
     +getBorder()
-    +getMargin(10px,20px)
+    +getMargin(0,20px)
     @include getPadding(10px,20px)
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    input
+      @include getPadding(0,3px )
+      max-width: 30%
+
     ul
       padding: 0
 
