@@ -17,19 +17,79 @@
 
 *
   transition: all .4s
-  word-break: break-all
+  // word-break: break-all
 
 body
-  +getMargin(50px,10px)
-  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif
+  +getMargin(50px,0px)
+  font: 18px nunito,"Lucida Grande", Helvetica, Arial, sans-serif
   background-color: #FEF4E2
   color: #1C0E10
 
 a
   color: #1C0E10
+  text-decoration: none
 
   &:hover
-    color: #622680
+    color: #4c262b
 
-  &:visited
-    color: #622680
+  // &:visited
+  //   color: #622680
+
+nav
+  display: flex
+  justify-content: space-between
+  background-color: #4c262b
+  box-shadow: 5px 5px 10px #1C0E10
+  border-radius: 0px 0px 10px 10px
+
+  .title
+    color: #FEF4E2
+  ul
+    display: flex
+  li
+    display: block
+    +getMargin(10px,0)
+    font-size: 1.5em
+    font-weight: bold
+    a
+      color: #FEF4E2
+      &:hover
+        color: #FEF4E2
+
+      &:visited
+        color: #FEF4E2
+
+section
+  display: flex
+  +getMargin(0,25px)
+
+  .monArticle
+    +getMargin(25px,20px)
+    +getPadding(25px,0)
+    max-width: 800px
+    border: 5px #4c262b solid
+    box-shadow: 5px 5px 10px #1C0E10
+    border-radius: 10px
+
+  .header
+    display: flex
+    justify-content: space-between
+
+    .categorie
+      display: flex
+      align-items: center
+
+  .main
+    display: flex
+    img
+      +getSize(auto,300px)
+
+    p
+      text-align: justify
+      +getPadding(10px,0)
+
+  .footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border: 1px black solid
