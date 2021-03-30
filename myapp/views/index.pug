@@ -8,6 +8,31 @@ block content
       li A propos 
       li Contact 
 
+  .section
+    .articles 
+      +ajoutArticle("Le seigneur des anneaux",
+      "Heroic Fantasy",
+      './images/lord_of_ring1.jpg',
+      "Un jeune et timide `Hobbit', Frodon Sacquet, hérite d'un anneau magique. Bien loin d'être une simple babiole, il s'agit d'un instrument de pouvoir absolu qui permettrait à Sauron, le `Seigneur des ténèbres', de régner sur la `Terre du Milieu' et de réduire en esclavage ses peuples. Frodon doit parvenir jusqu'à la `Crevasse du Destin' pour détruire l'anneau.",'Peter Jackson', 
+      'acteur1',
+      '19/12/2001')
+
+    .sideBar
+
+
+//- Mixins
+
+mixin ajoutArticle(titreFilm,categorie,lienImg,description,realisateur,acteurs,dateSortie)
+  .monArticle 
+    .visuelFilm 
+      h2= titreFilm || 'Pas de titre renseigné'
+      p= 'Par ' + realisateur + ' avec ' + acteurs 
+      img(src=lienImg)
+    .infosFilm 
+      p=categorie
+      p=description 
+      p='Sortie le ' + dateSortie
+    
 
 
       
