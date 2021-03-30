@@ -1,37 +1,62 @@
 extends layout
 
 block content
-  .nav 
-    .title BestMovies 
-    ul.menu
-      li Home 
-      li A propos 
-      li Contact 
+  //- Variables : 
 
-  .section
-    .articles 
+  - var acteurs = ["acteur1","acteur2","acteur3"]
+  - var categories = [{lien:'#',text:'Action'},{lien:'#',text:'Aventure'},{lien:'#',text:'Science fiction'},{lien:'#',text:'Comédie'}]
+
+
+
+
+  nav 
+    .title BestMovies 
+      ul
+        each val in [{lien:'#',text:'Accueil'},{lien:'#',text:'A propos'},{lien:'#',text:'Contact'}]
+          li
+            a(href=val.lien) #{val.text}
+
+  section
+    article
       +ajoutArticle("Le seigneur des anneaux",
       "Heroic Fantasy",
       './images/lord_of_ring1.jpg',
       "Un jeune et timide `Hobbit', Frodon Sacquet, hérite d'un anneau magique. Bien loin d'être une simple babiole, il s'agit d'un instrument de pouvoir absolu qui permettrait à Sauron, le `Seigneur des ténèbres', de régner sur la `Terre du Milieu' et de réduire en esclavage ses peuples. Frodon doit parvenir jusqu'à la `Crevasse du Destin' pour détruire l'anneau.",'Peter Jackson', 
-      'acteur1',
+      acteurs,
       '19/12/2001')
 
     .sideBar
+      input(
+        type='text'
+        name='Rechercher'
+        id="Rechercher"
+        placeholder="Rechercher.."
+      )
+      ul.categorieFilm
+        each val in categories
+          li
+            a(href=val.lien) #{val.text}
+
+
 
 
 //- Mixins
 
 mixin ajoutArticle(titreFilm,categorie,lienImg,description,realisateur,acteurs,dateSortie)
   .monArticle 
-    .visuelFilm 
-      h2= titreFilm || 'Pas de titre renseigné'
-      p= 'Par ' + realisateur + ' avec ' + acteurs 
+    .header
+      a(href='#')
+        h2= titreFilm
+      .categorie #{categorie}
+    .main  
       img(src=lienImg)
-    .infosFilm 
-      p=categorie
       p=description 
-      p='Sortie le ' + dateSortie
+    .footer
+      .date Sortie le #{dateSortie}
+      .real Par #{realisateur} 
+      ul.actor
+        each val in acteurs
+          li=val
     
 
 
