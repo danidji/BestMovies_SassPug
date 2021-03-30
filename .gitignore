@@ -3,3 +3,6 @@ node_modules/
 
 # Exclude package-lock.json, etc.
 package-lock.json
+
+# Exclusion des fichiers .css qui seront charger avec sass
+*.css
