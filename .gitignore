@@ -1,0 +1,5 @@
+# Pas besoin de les sauvegarder, on les récupère avec npm install
+node_modules/
+
+# Exclude package-lock.json, etc.
+package-lock.json
