@@ -2,7 +2,7 @@
     "film1": {
         "titreFilm": "Le seigneur des anneaux",
         "Categorie": "Aventure",
-        "lienImg": "./images/lord_of_ring1.jpg",
+        "lienImg": "../images/lord_of_ring1.jpg",
         "description": "Un jeune et timide `Hobbit', Frodon Sacquet, hérite d'un anneau magique. Bien loin d'être une simple babiole, il s'agit d'un instrument de pouvoir absolu qui permettrait à Sauron, le `Seigneur des ténèbres', de régner sur la `Terre du Milieu' et de réduire en esclavage ses peuples. Frodon doit parvenir jusqu'à la `Crevasse du Destin' pour détruire l'anneau",
         "realisateur": "Peter Jackson",
         "acteur": [
@@ -16,7 +16,7 @@
     "film2": {
         "titreFilm": "Interstellar",
         "Categorie": "Science fiction",
-        "lienImg": "./images/interstellar.jpg",
+        "lienImg": "../images/interstellar.jpg",
         "description": "Le film raconte les aventures d’un groupe d’explorateurs qui utilisent une faille récemment découverte dans l’espace-temps afin de repousser les limites humaines et partir à la conquête des distances astronomiques dans un voyage interstellaire.",
         "realisateur": "Christopher Nolan",
         "acteur": [
@@ -30,7 +30,7 @@
     "film3": {
         "titreFilm": "Shutter island",
         "Categorie": "thriller",
-        "lienImg": "./images/shutter_island.jpg",
+        "lienImg": "../images/shutter_island.jpg",
         "description": "En 1954, le marshal Teddy Daniels et son coéquipier Chuck Aule sont envoyés enquêter sur l'île de Shutter Island, dans un hôpital psychiatrique où sont internés de dangereux criminels. L'une des patientes, Rachel Solando, a inexplicablement disparu. Comment la meurtrière a-t-elle pu sortir d'une cellule fermée de l'extérieur ? Le seul indice retrouvé dans la pièce est une feuille de papier sur laquelle on peut lire une suite de chiffres et de lettres sans signification apparente. Oeuvre cohérente d'une malade, ou cryptogramme ?",
         "realisateur": "Martin Scorsese",
         "acteur": [

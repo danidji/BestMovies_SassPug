@@ -19,7 +19,7 @@ router.get('/:id', function (req, res, next) {
 
         let filmAAfficher = dataMovies[idMovie]
 
-        console.log(filmAAfficher)
+        console.log(filmAAfficher.lienImg)
 
         res.render('movie', {
             title: "BestMovies",
