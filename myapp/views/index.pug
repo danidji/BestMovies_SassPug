@@ -12,7 +12,7 @@ block content
 
   .container 
     nav 
-      .title BestMovies 
+      .title #{title} 
       ul
         each val in [{lien:'#',text:'Accueil'},{lien:'#',text:'A propos'},{lien:'#',text:'Contact'}]
           li
@@ -20,19 +20,23 @@ block content
 
     section
       article
-        +ajoutArticle("Le seigneur des anneaux",
-        "Aventure",
-        './images/lord_of_ring1.jpg',
-        "Un jeune et timide `Hobbit', Frodon Sacquet, hérite d'un anneau magique. Bien loin d'être une simple babiole, il s'agit d'un instrument de pouvoir absolu qui permettrait à Sauron, le `Seigneur des ténèbres', de régner sur la `Terre du Milieu' et de réduire en esclavage ses peuples. Frodon doit parvenir jusqu'à la `Crevasse du Destin' pour détruire l'anneau.",'Peter Jackson', 
-        acteurLOK,
-        '19/12/2001')
-        +ajoutArticle("Interstellar",
-        "Science fiction",
-        './images/interstellar.jpg',
-        "Le film raconte les aventures d’un groupe d’explorateurs qui utilisent une faille récemment découverte dans l’espace-temps afin de repousser les limites humaines et partir à la conquête des distances astronomiques dans un voyage interstellaire. ",
-        'Christopher Nolan', 
-        acteurInter,
-        '19/12/2001')
+        +ajoutArticle(
+        dataMovies.film1.titreFilm,
+        dataMovies.film1.categorie,
+        dataMovies.film1.lienImg,
+        dataMovies.film1.description,
+        dataMovies.film1.realisateur, 
+        dataMovies.film1.acteur,
+        dataMovies.film1.dateSortie)
+        +ajoutArticle(
+        dataMovies.film2.titreFilm,
+        dataMovies.film2.categorie,
+        dataMovies.film2.lienImg,
+        dataMovies.film2.description,
+        dataMovies.film2.realisateur, 
+        dataMovies.film2.acteur,
+        dataMovies.film2.dateSortie)
+        
 
       .sideBar
         input(
@@ -46,10 +50,6 @@ block content
             li
               a(href=val.lien) #{val.text}
       
-
-
-
-
 
 //- Mixins
 

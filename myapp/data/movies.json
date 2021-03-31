@@ -1,0 +1,28 @@
+{
+    "film1": {
+        "titreFilm": "Le seigneur des anneaux",
+        "Categorie": "Aventure",
+        "lienImg": "./images/lord_of_ring1.jpg",
+        "description": "Un jeune et timide `Hobbit', Frodon Sacquet, hérite d'un anneau magique. Bien loin d'être une simple babiole, il s'agit d'un instrument de pouvoir absolu qui permettrait à Sauron, le `Seigneur des ténèbres', de régner sur la `Terre du Milieu' et de réduire en esclavage ses peuples. Frodon doit parvenir jusqu'à la `Crevasse du Destin' pour détruire l'anneau",
+        "realisateur": "Peter Jackson",
+        "acteur": [
+            "Elijah Wood",
+            "Sean Astin",
+            "Ian Mckellen"
+        ],
+        "dateSortie": "19/12/2001"
+    },
+    "film2": {
+        "titreFilm": "Interstellar",
+        "Categorie": "Science fiction",
+        "lienImg": "./images/interstellar.jpg",
+        "description": "Le film raconte les aventures d’un groupe d’explorateurs qui utilisent une faille récemment découverte dans l’espace-temps afin de repousser les limites humaines et partir à la conquête des distances astronomiques dans un voyage interstellaire.",
+        "realisateur": "Christopher Nolan",
+        "acteur": [
+            "Matthew McConaughey",
+            "Anne Hathaway",
+            "Michael Caine"
+        ],
+        "dateSortie": "05/11/2014"
+    }
+}
