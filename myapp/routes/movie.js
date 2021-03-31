@@ -6,7 +6,7 @@ let fs = require('fs');
 /* GET movie page. */
 
 //Définir la route en fonction d'un id => film1, film2 ... 
-
+//            v
 router.get('/:id', function (req, res, next) {
   console.log(req.params.id)
   let idMovie = req.params.id
