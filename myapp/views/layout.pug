@@ -9,9 +9,9 @@ html
     nav 
       .title #{title} 
       ul
-        each val in [{lien:'#',text:'Accueil'},{lien:'#',text:'A propos'},{lien:'#',text:'Contact'}]
+        each val in [{lien:'/',text:'Accueil'},{lien:'#',text:'A propos'},{lien:'#',text:'Contact'}]
           li
             a(href=val.lien) #{val.text}
 
-            
+
     block content
