@@ -93,7 +93,9 @@ section
 
   .main
     display: flex
+    flex-direction: column
     img
+      margin: auto
       +getSize(auto,300px)
 
     p
@@ -104,6 +106,8 @@ section
     display: flex
     align-items: center
     justify-content: space-between
+    li
+      list-style-type: none
 
   .sideBar
     +getBorder()
@@ -124,3 +128,22 @@ section
         display: block
         text-align: center
         @include getSize(auto,auto )
+
+@media screen and (min-width: 768px)
+  nav
+    ul
+      display: flex
+      justify-content: space-around
+
+      a
+        +getPadding(50px,5px)
+
+@media screen and (min-width: 1280px)
+  section
+    display: flex
+
+    .sideBar
+      margin-left: 15px
+
+      input
+        max-width: 70%
