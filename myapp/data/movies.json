@@ -10,7 +10,8 @@
             "Sean Astin",
             "Ian Mckellen"
         ],
-        "dateSortie": "19/12/2001"
+        "dateSortie": "19/12/2001",
+        "cheminPage": "/movie/film1"
     },
     "film2": {
         "titreFilm": "Interstellar",
@@ -23,7 +24,8 @@
             "Anne Hathaway",
             "Michael Caine"
         ],
-        "dateSortie": "05/11/2014"
+        "dateSortie": "05/11/2014",
+        "cheminPage": "/movie/film2"
     },
     "film3": {
         "titreFilm": "Shutter island",
@@ -36,6 +38,7 @@
             "Mark Ruffalo",
             "Ben Kingsley"
         ],
-        "dateSortie": "24/02/2010"
+        "dateSortie": "24/02/2010",
+        "cheminPage": "/movie/film3"
     }
 }

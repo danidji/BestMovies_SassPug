@@ -19,7 +19,8 @@ block content
         dataMovies.film1.description,
         dataMovies.film1.realisateur, 
         dataMovies.film1.acteur,
-        dataMovies.film1.dateSortie)
+        dataMovies.film1.dateSortie,
+        dataMovies.film1.cheminPage)
         +ajoutArticle(
         dataMovies.film2.titreFilm,
         dataMovies.film2.categorie,
@@ -27,7 +28,8 @@ block content
         dataMovies.film2.description,
         dataMovies.film2.realisateur, 
         dataMovies.film2.acteur,
-        dataMovies.film2.dateSortie)
+        dataMovies.film2.dateSortie,
+        dataMovies.film2.cheminPage)
         +ajoutArticle(
         dataMovies.film3.titreFilm,
         dataMovies.film3.categorie,
@@ -35,7 +37,8 @@ block content
         dataMovies.film3.description,
         dataMovies.film3.realisateur, 
         dataMovies.film3.acteur,
-        dataMovies.film3.dateSortie)
+        dataMovies.film3.dateSortie,
+        dataMovies.film3.cheminPage)
         
 
       .sideBar
@@ -53,10 +56,10 @@ block content
 
 //- Mixins
 
-mixin ajoutArticle(titreFilm,categorie,lienImg,description,realisateur,acteurs,dateSortie)
+mixin ajoutArticle(titreFilm,categorie,lienImg,description,realisateur,acteurs,dateSortie,cheminPage)
   .monArticle 
     .header
-      a(href='#')
+      a(href=cheminPage)
         h2= titreFilm
       .categorie #{categorie}
     .main  
