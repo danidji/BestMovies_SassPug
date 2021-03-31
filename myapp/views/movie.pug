@@ -1,18 +1,19 @@
 extends layout
 
 block content
-    section
-        .monArticle 
-            .header
-                h2 #{filmAAfficher.titreFilm}
+  section
+    .monArticle 
+      .header
+        h2 #{filmAAfficher.titreFilm}
 
-                .categorie #{filmAAfficher.categorie}
+          .categorie #{filmAAfficher.categorie}
             .main  
-                img(src=filmAAfficher.lienImg)
-                p=filmAAfficher.description 
+              img(src=filmAAfficher.lienImg)
+              p=filmAAfficher.description 
             .footer
-                .date Sortie le #{filmAAfficher.dateSortie}
-                .real Par #{filmAAfficher.realisateur} 
-                ul.actor
-                    each val in filmAAfficher.acteur
-                        li=val
+              .date Sortie le #{filmAAfficher.dateSortie}
+              .real Par #{filmAAfficher.realisateur} 
+              ul.actor
+                p Acteurs : 
+                each val in filmAAfficher.acteur
+                    li=val

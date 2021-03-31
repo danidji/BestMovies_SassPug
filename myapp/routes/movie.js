@@ -8,24 +8,24 @@ let fs = require('fs');
 //Définir la route en fonction d'un id => film1, film2 ... 
 
 router.get('/:id', function (req, res, next) {
-    console.log(req.params.id)
-    let idMovie = req.params.id
+  console.log(req.params.id)
+  let idMovie = req.params.id
 
 
-    fs.readFile('./data/movies.json', (err, data) => {
-        if (err) throw err
-        let dataMovies = JSON.parse(data)
+  fs.readFile('./data/movies.json', (err, data) => {
+    if (err) throw err
+    let dataMovies = JSON.parse(data)
 
 
-        let filmAAfficher = dataMovies[idMovie]
+    let filmAAfficher = dataMovies[idMovie]
 
-        console.log(filmAAfficher.lienImg)
+    console.log(filmAAfficher.lienImg)
 
-        res.render('movie', {
-            title: "BestMovies",
-            filmAAfficher: filmAAfficher
-        })
+    res.render('movie', {
+      title: "BestMovies",
+      filmAAfficher: filmAAfficher
     })
+  })
 
 
 })
